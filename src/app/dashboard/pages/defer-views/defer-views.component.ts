@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
+import { HeavyLoadersLowComponent } from '../../../shared/heavy-loaders/heavy-loaders-low.component';
 
 @Component({
   standalone: true,
-  imports: [],
+  imports: [HeavyLoadersLowComponent],
   templateUrl: './defer-views.component.html',
   styleUrl: './defer-views.component.css'
 })
-export class DeferViewsComponent {
+export default class DeferViewsComponent {
+
+  
 
 }
