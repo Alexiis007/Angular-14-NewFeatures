@@ -1,1 +1,13 @@
-<p>users works!</p>
+<shared-title title="LIstado de usuarios"></shared-title>
+<ul>
+    @for (user of usersService.users(); track user.id) {
+        <li class="flex item-center my-2 cursor-pointer">
+            <img [srcset]="user.avatar" [alt]="user.firstName" 
+            class="rounded w-14">
+            <a [routerLink]="['/dashboard/user',user.id]" routerLinkActive="router-link-active" 
+            class="mx-5 hover:underline">{{user.email}} - {{user.id}}</a>
+        </li>
+    }@empty {
+        <h1>Esperando data</h1>
+    }
+</ul>

@@ -19,3 +19,8 @@ export interface Support {
     url:  string;
     text: string;
 }
+
+//sssssss
+export interface SingleUserResponse {
+    data:    User;
+}
