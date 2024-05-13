@@ -1,2 +1,18 @@
-<p>defer-views works!</p>
-<shared-low-loaders></shared-low-loaders>
+<shared-title title="Defer-Blocks"></shared-title>
+<section class="grid grid-cols-1">
+    @defer () {
+        <shared-low-loaders cssClass="bg-blue-500"></shared-low-loaders>
+    }@placeholder {
+        <p class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse">Cargando...</p>
+    }
+    @defer (on idle) {
+        <shared-low-loaders cssClass="bg-blue-500"></shared-low-loaders>
+    }@placeholder {
+        <p class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse">Cargando...</p>
+    }
+    @defer (on viewport) {
+        <shared-low-loaders cssClass="bg-blue-500"></shared-low-loaders>
+    }@placeholder {
+        <p class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse">Cargando...</p>
+    }
+</section>

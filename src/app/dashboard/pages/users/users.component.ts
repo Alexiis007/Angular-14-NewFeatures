@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { UsersService } from '../../services/users.service';
 
 @Component({
   standalone: true,
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './users.component.css'
 })
 export default class UsersComponent {
-
+  private usersService = inject(UsersService);
 }
